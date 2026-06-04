@@ -1,0 +1,32 @@
+<div class="bngApp" style="width: 100%; height: 100%;">
+  <md-card style="margin: 0; padding: 10px; background-color: rgba(30, 30, 30, 0.95); color: #fff; height: 100%; box-sizing: border-box; overflow-y: auto;">
+    <div style="font-family: Roboto, 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif; height: 100%; flex-direction: column; display: flex;">
+      <h3 style="margin-top: 0; border-bottom: 2px solid #ef6a00; padding-bottom: 5px; font-weight: bold; font-size: 14px; text-transform: uppercase;">AGA Tuning</h3>
+      
+      <div style="margin-top: 10px;">
+        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px;">
+          <span>Speed Sensitivity</span>
+          <span style="color: #ef6a00; font-weight: bold;">{{config.speedSensitivity | number:3}}</span>
+        </div>
+        <md-slider min="0" max="0.1" step="0.005" ng-model="config.speedSensitivity" ng-change="updateSettings()" class="md-warn" aria-label="Speed Sensitivity"></md-slider>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px;">
+          <span>Steer Filtering</span>
+          <span style="color: #ef6a00; font-weight: bold;">{{config.smoothingRate | number:1}}</span>
+        </div>
+        <md-slider min="1" max="30" step="0.5" ng-model="config.smoothingRate" ng-change="updateSettings()" class="md-warn" aria-label="Steer Filtering"></md-slider>
+      </div>
+
+      <div style="margin-top: 10px;">
+        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 5px;">
+          <span>Countersteer Assist</span>
+          <span style="color: #ef6a00; font-weight: bold;">{{config.counterSteerStrength | number:2}}</span>
+        </div>
+        <md-slider min="0" max="1.5" step="0.05" ng-model="config.counterSteerStrength" ng-change="updateSettings()" class="md-warn" aria-label="Countersteer"></md-slider>
+      </div>
+      
+    </div>
+  </md-card>
+</div>

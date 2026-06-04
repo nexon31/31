@@ -1,0 +1,13 @@
+{
+  "name": "AGA Tuning",
+  "description": "Advanced Gamepad Assist Tuning (AGA)",
+  "version": "1.0",
+  "author": "AI Studio",
+  "domElement": "<advanced-gamepad-assist></advanced-gamepad-assist>",
+  "types": [
+    "ui"
+  ],
+  "categories": [
+    "Vehicle Control"
+  ]
+}
